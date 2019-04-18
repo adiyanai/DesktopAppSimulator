@@ -13,7 +13,14 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <views:FlightBoard Grid.Column="0"/>
-        <views:Joystick Grid.Column="1"/>
+        <TabControl Grid.Column="1" FontWeight="Black">
+            <TabItem Header="Manual">
+                <views:Joystick/>
+            </TabItem>
+            <TabItem Header="Auto Pilot">
+                <views:AutoPilot/>
+            </TabItem>
+        </TabControl>
     </Grid>
 
 </Window>

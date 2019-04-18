@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="500">
+             d:DesignHeight="480" d:DesignWidth="480">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60"/>
@@ -12,8 +12,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="380"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="400"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="← throttle → " FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
@@ -26,18 +26,27 @@
                 <RotateTransform Angle="90"/>
             </Slider.LayoutTransform>
         </Slider>
+        <Label x:Name="throttleValue" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
 
-        <TextBlock Text="← elevator →" FontSize="20" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1">
+        <TextBlock Text="← elevator →" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1">
             <TextBlock.LayoutTransform>
                 <RotateTransform Angle="90"/>
             </TextBlock.LayoutTransform>
         </TextBlock>
+        <Label x:Name="elevatorValue" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="90"/>
+            </Label.LayoutTransform>  
+        </Label>
 
-        <TextBlock Text="← aileron →" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="0"/>
+        <TextBlock Text="← aileron →" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="aileronValue" FontSize="20" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="0"/>
+        
         <TextBlock Text="← rudder →" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="2"/>
-        <Slider x:Name="rudderSlider" Minimum="0" Maximum="1" TickPlacement="BottomRight" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1" Width="300"/>
+        <Slider x:Name="rudderSlider" Minimum="-1" Maximum="1" TickPlacement="BottomRight" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1" Width="300"/>
+        <Label x:Name="rudderValue" FontSize="20" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1"/>
 
-        <Canvas  x:Name="Base" Margin="90, 65" Width="340" Height="340">
+        <Canvas  x:Name="Base" Margin="90, 40" Width="340" Height="340">
             <Ellipse HorizontalAlignment="Left" Height="340" VerticalAlignment="Center" Width="340">
                 <Ellipse.Fill>
                     <RadialGradientBrush>
