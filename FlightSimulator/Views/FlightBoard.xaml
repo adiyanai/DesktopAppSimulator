@@ -29,7 +29,7 @@
         <TextBlock Style="{StaticResource LabelStyle}" LayoutTransform="{StaticResource rotate}" VerticalAlignment="Center">Lon</TextBlock>
         <d3:ChartPlotter Grid.Row="0" LegendVisible="False" Name="plotter" Grid.ColumnSpan="2" Margin="34,36,9.6,0.2"/>
         <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource LabelStyle}" HorizontalAlignment="Center">Lat</TextBlock>
-        <Button Content="Connect" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="119.6,2,0,0" VerticalAlignment="Top" Width="69" Click="Button_Click"/>
-        <Button Content="Setting" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="203.6,2,0,0" VerticalAlignment="Top" Width="69" Click="Button_Click"/>
+        <Button Command="{Binding ConnectCommand}" Content="Connect" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="119.6,2,0,0" VerticalAlignment="Top" Width="69" Click="Button_Click"/>
+        <Button Command="{Binding SettingsCommand}" Content="Setting" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="203.6,2,0,0" VerticalAlignment="Top" Width="69" Click="Button_Click"/>
     </Grid>
 </UserControl>
