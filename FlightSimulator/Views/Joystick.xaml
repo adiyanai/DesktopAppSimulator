@@ -5,48 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              d:DesignHeight="480" d:DesignWidth="480">
-    
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="380"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="400"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <TextBlock Text="← throttle → " FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
-            <TextBlock.LayoutTransform>
-                <RotateTransform Angle="90"/>
-            </TextBlock.LayoutTransform>
-        </TextBlock>
-        <Slider x:Name="throttleSlider" Value="{Binding Throttle}" Minimum="0" Maximum="1" TickPlacement="TopLeft" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Width="300">
-            <Slider.LayoutTransform>
-                <RotateTransform Angle="90"/>
-            </Slider.LayoutTransform>
-        </Slider>
-        <Label x:Name="throttleValue" Content="{Binding Path=Throttle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Margin="0,15"/>
-
-        <TextBlock Text="← elevator →" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1">
-            <TextBlock.LayoutTransform>
-                <RotateTransform Angle="90"/>
-            </TextBlock.LayoutTransform>
-        </TextBlock>
-        <Label x:Name="elevatorValue" Content="{Binding Elevator}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Margin="0, 30">
-            <Label.LayoutTransform>
-                <RotateTransform Angle="90"/>
-            </Label.LayoutTransform>  
-        </Label>
-
-        <TextBlock Text="← aileron →" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
-        <Label x:Name="aileronValue" Content="{Binding Aileron}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
-        
-        <TextBlock Text="← rudder →" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="2"/>
-        <Slider x:Name="rudderSlider" Value="{Binding Rudder}" Minimum="-1" Maximum="1" TickPlacement="BottomRight" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1" Width="300"/>
-        <Label x:Name="rudderValue" Content="{Binding Path=Rudder}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1"/>
-
         <Canvas  x:Name="Base" Margin="90, 40" Width="340" Height="340">
             <Ellipse HorizontalAlignment="Left" Height="340" VerticalAlignment="Center" Width="340">
                 <Ellipse.Fill>

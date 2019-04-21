@@ -9,10 +9,11 @@ namespace FlightSimulator.ViewModels
 {
     class JoystickViewModel : BaseNotify
     {
-        public JoystickViewModel()
-        {
-        
-        }
+        // the paths to the componants in the xml
+        private string throttlePath = "set controls/engines/current-engine/throttle ";
+        private string elevatorPath = "set controls/flight/elevator ";
+        private string aileronPath = "set controls/flight/aileron ";
+        private string rudderPath = "set controls/flight/rudder ";
 
         private double throttle = 0;
         public double Throttle
@@ -25,8 +26,8 @@ namespace FlightSimulator.ViewModels
             {
                 throttle = Math.Round(value, 2);
                 NotifyPropertyChanged("Throttle");
-                string setThrottle = "set /controls/engines/current-engine/throttle " + throttle;
-                //לעדכן את הערך אצל המטוס
+                string setThrottle = throttlePath + throttle + " " + "\r\n";
+                CommandModel.Instance.SendMessage(setThrottle);
             }
         }
 
@@ -41,8 +42,8 @@ namespace FlightSimulator.ViewModels
             {
                 elevator = Math.Round(value, 2);
                 NotifyPropertyChanged("Elevator");
-                string setElevator = "set /controls/flight/elevator " + elevator;
-                //לעדכן את הערך אצל המטוס
+                string setElevator = elevatorPath + elevator + " " + "\r\n";
+                CommandModel.Instance.SendMessage(setElevator);
             }
         }
 
@@ -57,8 +58,8 @@ namespace FlightSimulator.ViewModels
             {
                 aileron = Math.Round(value, 2);
                 NotifyPropertyChanged("Aileron");
-                string setAileron = "set /controls/flight/aileron " + aileron;
-                //לעדכן את הערך אצל המטוס
+                string setAileron = aileronPath + aileron + " " + "\r\n";
+                CommandModel.Instance.SendMessage(setAileron);
             }
         }
 
@@ -73,8 +74,8 @@ namespace FlightSimulator.ViewModels
             {
                 rudder = Math.Round(value, 2);
                 NotifyPropertyChanged("Rudder");
-                string setRudder = "set /controls/flight/rudder " + rudder;
-                //לעדכן את הערך אצל המטוס
+                string setRudder = rudderPath + rudder + " " + "\r\n";
+                CommandModel.Instance.SendMessage(setRudder);
             }
         }
     }
