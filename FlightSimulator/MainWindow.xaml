@@ -15,7 +15,7 @@
         <views:FlightBoard Grid.Column="0"/>
         <TabControl Grid.Column="1" FontWeight="Black">
             <TabItem Header="Manual">
-                <views:Joystick/>
+                <views:MyJoystick/>
             </TabItem>
             <TabItem Header="Auto Pilot">
                 <views:AutoPilot/>

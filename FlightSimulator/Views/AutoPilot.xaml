@@ -5,13 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FlightSimulator.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="500">
+             d:DesignHeight="450" d:DesignWidth="450">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="180"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -19,8 +17,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBox x:Name="TextBox" Margin="3" Grid.Row="0" Grid.ColumnSpan="5" BorderBrush="LightBlue" BorderThickness="1.5"/>
-        <Button Content="OK" FontSize="16" FontWeight="Bold" Width="40" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="Clear" FontSize="16" FontWeight="Bold" Width="55" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="3" Grid.Row="2"/>
+        <TextBox x:Name="TextBox" Background="{Binding BackgroundColor}" Text="{Binding TextString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" AcceptsReturn="True" TextWrapping="Wrap" Margin="3" Grid.Row="0" Grid.ColumnSpan="5" BorderBrush="LightBlue" BorderThickness="1.5"/>
+        <Button Content="OK" Command="{Binding OKCommand}" FontSize="16" FontWeight="Bold" Width="40" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2"/>
+        <Button Content="Clear" Command="{Binding ClearCommand}" FontSize="16" FontWeight="Bold" Width="55" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2"/>
     </Grid>
 </UserControl>

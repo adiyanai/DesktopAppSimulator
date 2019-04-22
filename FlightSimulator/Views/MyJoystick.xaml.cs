@@ -1,6 +1,5 @@
-﻿using FlightSimulator.Model;
-using FlightSimulator.ViewModels.Windows;
-using System;
+﻿using System;
+using FlightSimulator.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,19 +11,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FlightSimulator
+namespace FlightSimulator.Views
 {
     /// <summary>
-    /// Interaction logic for Settings.xaml
+    /// Interaction logic for MyJoystick.xaml
     /// </summary>
-    public partial class Settings : Window
+    public partial class MyJoystick : UserControl
     {
-        public Settings()
+        public MyJoystick()
         {
             InitializeComponent();
-            this.DataContext = new SettingsWindowViewModel(new ApplicationSettingsModel());
+            this.DataContext = new JoystickViewModel();
         }
     }
 }

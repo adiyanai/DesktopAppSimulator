@@ -51,11 +51,6 @@ namespace FlightSimulator.Views
                 planeLocations.AppendAsync(Dispatcher, p1);
             }
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 
 }

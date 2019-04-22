@@ -66,13 +66,19 @@
     </Compile>
     <Compile Include="Model\ApplicationSettingsModel.cs" />
     <Compile Include="Model\Client.cs" />
-    <Compile Include="Model\Command.cs" />
     <Compile Include="Model\CommandHandler.cs" />
+    <Compile Include="Model\CommandModel.cs" />
     <Compile Include="Model\EventArgs\VirtualJoystickEventArgs.cs" />
-    <Compile Include="Model\InfoModel.cs" />
+    <Compile Include="Model\Info.cs" />
     <Compile Include="Model\Interface\ISettingsModel.cs" />
+    <Compile Include="Model\Server.cs" />
+    <Compile Include="ViewModels\AutoPilotViewModel.cs" />
+    <Compile Include="ViewModels\JoystickViewModel.cs" />
     <Compile Include="Views\AutoPilot.xaml.cs">
       <DependentUpon>AutoPilot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyJoystick.xaml.cs">
+      <DependentUpon>MyJoystick.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
@@ -95,6 +101,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AutoPilot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MyJoystick.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
