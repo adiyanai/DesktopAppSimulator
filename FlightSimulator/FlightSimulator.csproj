@@ -65,8 +65,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\ApplicationSettingsModel.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\Command.cs" />
     <Compile Include="Model\CommandHandler.cs" />
     <Compile Include="Model\EventArgs\VirtualJoystickEventArgs.cs" />
+    <Compile Include="Model\InfoModel.cs" />
     <Compile Include="Model\Interface\ISettingsModel.cs" />
     <Compile Include="Views\AutoPilot.xaml.cs">
       <DependentUpon>AutoPilot.xaml</DependentUpon>

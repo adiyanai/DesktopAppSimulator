@@ -21,6 +21,6 @@
                 <views:AutoPilot/>
             </TabItem>
         </TabControl>
-    </Grid>
+      </Grid>
 
 </Window>
