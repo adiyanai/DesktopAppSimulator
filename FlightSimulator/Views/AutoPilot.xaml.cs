@@ -1,4 +1,5 @@
 ﻿using System;
+using FlightSimulator.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace FlightSimulator.Views
         public AutoPilot()
         {
             InitializeComponent();
+            this.DataContext = new AutoPilotViewModel();
         }
     }
 }

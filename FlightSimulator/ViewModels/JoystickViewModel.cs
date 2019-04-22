@@ -15,66 +15,71 @@ namespace FlightSimulator.ViewModels
         private string aileronPath = "set controls/flight/aileron ";
         private string rudderPath = "set controls/flight/rudder ";
 
-        private double throttle = 0;
+        private double throttleVal = 0;
+        private double elevatorVal = 0;
+        private double aileronVal = 0;
+        private double rudderVal = 0;
+
+
         public double Throttle
         {
             get
             {
-                return throttle;
+                return throttleVal;
             }
             set
             {
-                throttle = Math.Round(value, 2);
+                throttleVal = Math.Round(value, 2);
                 NotifyPropertyChanged("Throttle");
-                string setThrottle = throttlePath + throttle + " " + "\r\n";
+                string setThrottle = throttlePath + throttleVal + " " + "\r\n";
                 CommandModel.Instance.SendMessage(setThrottle);
             }
         }
 
-        private double elevator = 0;
+       
         public double Elevator
         {
             get
             {
-                return elevator;
+                return elevatorVal;
             }
             set
             {
-                elevator = Math.Round(value, 2);
+                elevatorVal = Math.Round(value, 2);
                 NotifyPropertyChanged("Elevator");
-                string setElevator = elevatorPath + elevator + " " + "\r\n";
+                string setElevator = elevatorPath + elevatorVal + " " + "\r\n";
                 CommandModel.Instance.SendMessage(setElevator);
             }
         }
 
-        private double aileron = 0;
+        
         public double Aileron
         {
             get
             {
-                return aileron;
+                return aileronVal;
             }
             set
             {
-                aileron = Math.Round(value, 2);
+                aileronVal = Math.Round(value, 2);
                 NotifyPropertyChanged("Aileron");
-                string setAileron = aileronPath + aileron + " " + "\r\n";
+                string setAileron = aileronPath + aileronVal + " " + "\r\n";
                 CommandModel.Instance.SendMessage(setAileron);
             }
         }
 
-        private double rudder = 0;
+        
         public double Rudder
         {
             get
             {
-                return rudder;
+                return rudderVal;
             }
             set
             {
-                rudder = Math.Round(value, 2);
+                rudderVal = Math.Round(value, 2);
                 NotifyPropertyChanged("Rudder");
-                string setRudder = rudderPath + rudder + " " + "\r\n";
+                string setRudder = rudderPath + rudderVal + " " + "\r\n";
                 CommandModel.Instance.SendMessage(setRudder);
             }
         }
