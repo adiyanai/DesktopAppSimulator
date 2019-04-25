@@ -19,7 +19,7 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="86"/>
         </Grid.RowDefinitions>
         
         <TextBlock Text="Flight Server IP:" Grid.Column="1" Grid.Row="1"/>
@@ -29,7 +29,7 @@
         <TextBlock Text="Flight Command Port:" Grid.Column="1" Grid.Row="3"/>
         <TextBox x:Name="ClientPort" Text="{Binding FlightCommandPort}" Grid.Column="3" Grid.Row="3" Width="100"  Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 
-        <Button Command="{Binding OKCommand}" Content="Ok" Grid.Column="1" Grid.Row="4" Width="50" Height="25" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Button Command="{Binding ClickCommand}" Content="Ok" Grid.Column="1" Grid.Row="4" Width="50" Height="25" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
         <Button Command="{Binding CancelCommand}" Content="Cancel" Grid.Column="4" Grid.Row="4" Width="50" Height="25" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>

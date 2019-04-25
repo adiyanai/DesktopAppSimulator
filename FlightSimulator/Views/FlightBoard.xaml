@@ -31,5 +31,6 @@
         <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource LabelStyle}" HorizontalAlignment="Center">Lat</TextBlock>
         <Button Command="{Binding ConnectCommand}" Content="Connect" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="119.6,2,0,0" VerticalAlignment="Top" Width="69"/>
         <Button Command="{Binding SettingsCommand}" Content="Setting" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="203.6,2,0,0" VerticalAlignment="Top" Width="69"/>
+        <Button Command="{Binding DisConnectCommand}" Content="Disconnect" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="35.6,2,0,0" VerticalAlignment="Top" Width="69"/>
     </Grid>
 </UserControl>

@@ -34,9 +34,9 @@ namespace FlightSimulator.Model
             Client.Connect();
         }
 
-        public void SendMessages(List<string> Messages)
+        public void SendMessage(string Message)
         {
-            Client.SendToServer(Messages);
+            Client.SendToServer(Message);
         }
 
         public void Close()

@@ -20,7 +20,6 @@ namespace FlightSimulator.ViewModels
         private double aileronVal = 0;
         private double rudderVal = 0;
 
-
         public double Throttle
         {
             get
