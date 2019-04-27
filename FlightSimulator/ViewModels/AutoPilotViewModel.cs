@@ -12,49 +12,19 @@ namespace FlightSimulator.ViewModels
 {
     class AutoPilotViewModel : BaseNotify
     {
-        private Brush back;
-        private string text;
         private ICommand _okCommand;
         private ICommand _clearCommand;
 
+        public AutoPilotModel APModel { get; set; }
 
         public AutoPilotViewModel()
         {
-            BackgroundColor = Brushes.White;
-            text = "";
+            APModel = new AutoPilotModel();
+            // initialize the background color
+            APModel.BackgroundColor = Brushes.White;
+            // initialize the text string
+            APModel.TextString = "";
         }
-
-        public Brush BackgroundColor
-        {
-            get
-            {
-                return back;
-            }
-            set
-            {
-                back = value;
-                NotifyPropertyChanged("BackgroundColor");
-            }
-        }
-
- 
-        public string TextString
-        {
-            get
-            {
-                return text;
-            }
-            set
-            {
-                text = value;
-                if (!string.IsNullOrEmpty(text))
-                {
-                    BackgroundColor = Brushes.LightPink;
-                }
-                NotifyPropertyChanged("TextString");
-            }
-        }
-
 
         public ICommand OKCommand
         {
@@ -68,13 +38,16 @@ namespace FlightSimulator.ViewModels
         {
             new Thread(() =>
             {
-                BackgroundColor = Brushes.White;
-                string[] commands = TextString.Split('\n');
+                APModel.BackgroundColor = Brushes.White;
+                // split the text string to commands
+                string[] commands = APModel.TextString.Split('\n');
+                // goes over all the commands and send them to the simulator with a pause of 2 seconds between each command
                 foreach (string cmd in commands)
                 {
                     string command = cmd;
                     command += "\r\n";
                     CommandModel.Instance.SendMessage(command);
+                    // pause of 2 seconds
                     Thread.Sleep(2000);
                 }
             }).Start();
@@ -91,8 +64,10 @@ namespace FlightSimulator.ViewModels
 
         private void OnClearClick()
         {
-            TextString = "";
-            BackgroundColor = Brushes.White;
+            // update the text string to be empty
+            APModel.TextString = "";
+            // update the background color to be white
+            APModel.BackgroundColor = Brushes.White;
         }
     }
 }

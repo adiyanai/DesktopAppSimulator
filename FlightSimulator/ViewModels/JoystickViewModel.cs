@@ -28,9 +28,12 @@ namespace FlightSimulator.ViewModels
             }
             set
             {
+                // take just two numbers after the dot
                 throttleVal = Math.Round(value, 2);
                 NotifyPropertyChanged("Throttle");
+                // create the command to the simulator
                 string setThrottle = throttlePath + throttleVal + " " + "\r\n";
+                // send command
                 CommandModel.Instance.SendMessage(setThrottle);
             }
         }
@@ -44,9 +47,12 @@ namespace FlightSimulator.ViewModels
             }
             set
             {
+                // take just two numbers after the dot
                 elevatorVal = Math.Round(value, 2);
                 NotifyPropertyChanged("Elevator");
+                // create the command to the simulator
                 string setElevator = elevatorPath + elevatorVal + " " + "\r\n";
+                // send command
                 CommandModel.Instance.SendMessage(setElevator);
             }
         }
@@ -60,9 +66,12 @@ namespace FlightSimulator.ViewModels
             }
             set
             {
+                // take just two numbers after the dot
                 aileronVal = Math.Round(value, 2);
                 NotifyPropertyChanged("Aileron");
+                // create the command to the simulator
                 string setAileron = aileronPath + aileronVal + " " + "\r\n";
+                // send command
                 CommandModel.Instance.SendMessage(setAileron);
             }
         }
@@ -76,9 +85,12 @@ namespace FlightSimulator.ViewModels
             }
             set
             {
+                // take just two numbers after the dot
                 rudderVal = Math.Round(value, 2);
                 NotifyPropertyChanged("Rudder");
+                // create the command to the simulator
                 string setRudder = rudderPath + rudderVal + " " + "\r\n";
+                // send command
                 CommandModel.Instance.SendMessage(setRudder);
             }
         }

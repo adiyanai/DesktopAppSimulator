@@ -87,7 +87,7 @@ namespace FlightSimulator.ViewModels
             {
                 this.isConnect = false;
                 InfoModel.Instance.Stop();
-                Command.Instance.Close();
+                CommandModel.Instance.Close();
             }
         }
     }
